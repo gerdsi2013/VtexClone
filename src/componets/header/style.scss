@@ -1,0 +1,101 @@
+
+$primarycolor:red;
+$colorDark:#000;
+$colorWhite:#fff;
+$colorBorder: rgba(0,0,0 ,0.1);
+$font-roboto:roboto, sans-serif, arial;
+
+//funcoes
+@mixin flexCenter($justify-content) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+}
+
+
+.menu-main {
+  width: 100%;
+  @include flexCenter(flex-start);
+  border-bottom: 1px solid $colorBorder;
+  padding-left: 2rem;
+  align-items: center;
+  box-sizing: border-box;
+  
+  
+
+
+  .menu-left ul {
+    width:100%;
+    list-style: none;
+    @include flexCenter(center);
+    
+    
+   // justify-content:
+  }
+  .menu-left ul li {
+    margin-right: 2.3rem;
+
+    
+  }
+
+  .menu-left ul li a {
+    font-family:$font-roboto;
+    color: $colorDark;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover{
+      color: red;
+      transition: 0.2s;
+    }
+  }
+  .menu-left .last{
+    @include flexCenter(center);
+    margin-left:10rem;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    border-right: 1px solid $colorBorder;
+    
+    font-weight: 500;
+    line-height: 1px;
+    
+    padding:1rem 1rem 1rem 3rem;
+      
+  
+  }
+  
+  .menu-left .last img{
+    width:10px;
+    height:15px;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+  }
+}
+
+
+.menu-rigth {
+  @include flexCenter(center);
+  padding:1rem;
+
+  
+
+  .globo-icons{
+    margin-right: 0.8rem;
+    
+  }
+  .globo-icons img{
+    width: 15px;
+    height: 15px;
+
+    &:hover{
+      background-color: red;
+      color: red;
+    }
+ }
+
+ .seta-icons img{
+   width: 10px;
+   height:12px;
+ }
+}
